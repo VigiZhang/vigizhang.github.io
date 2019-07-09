@@ -1,7 +1,7 @@
 ---
 layout: article
 title:  "AFL源码阅读笔记"
-tags: fuzzing
+tags: fuzz
 ---
 
 ## afl-gcc.c

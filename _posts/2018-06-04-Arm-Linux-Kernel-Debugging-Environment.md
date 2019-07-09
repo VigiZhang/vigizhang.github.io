@@ -1,7 +1,7 @@
 ---
 layout: article
 title:  "Arm Linux Kernel调试环境搭建"
-tags: pwn, exploit
+tags: pwn
 ---
 
 _version_: 1.0

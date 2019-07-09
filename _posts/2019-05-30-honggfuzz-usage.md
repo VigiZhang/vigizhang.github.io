@@ -1,20 +1,19 @@
 ---
 layout: article
 title:  "Honggfuzz Usage"
-tags: fuzzing
+tags: fuzz
 ---
 
-### Feedback-driven Fuzzing
+## Feedback-driven Fuzzing
 
 Honggfuzz实现了如下feedback-guided fuzzing方法：
+<!--more-->
 
 1. (Linux) Hardware-based counter (instructions, branches)
 2. (Linux) Intel BTS code coverage (kernel >= 4.2)
 3. (Linux) Intel PT code coverage (kernel >= 4.2)
 4. Sanitizer-coverage instrumentation (`-fsanitize-coverage=bb`)
 5. Compile-time instrumentation (`-finstrument-functions`or`-fsanitize-coverage=trace-pc[-guard],indirect-calls,trace-cmp`or both)
-
-<!--more-->
 
 hfuzz-clang会使用本机clang，所以本机clang的版本会对编译产生影响。
 
@@ -25,7 +24,7 @@ hfuzz-clang会使用本机clang，所以本机clang的版本会对编译产生�
 
 使用hfuzz-clang时会默认添加编译选项`-fsanitize-coverage=trace-pc-guard,indirect-calls,trace-cmp`，所以确保本机clang大于等于4.0版本就没问题。并且，当使用hfuzz-clang时也会自动链接libhfuzz.a。
 
-#### Persistent Mode
+### Persistent Mode
 
 **-P**选项将使用持久化模式进行fuzz。需要代码支持，两种可用持久化的代码如下：
 
@@ -107,7 +106,7 @@ $ honggfuzz -P -S -f in -W out -- ./fuzz-target
 
 此外，输入数据可从标准输入**-s**`read(0, buf, sizeof(buf))`或者文件`___FILE___`中读取。
 
-### Use External Fuzzer
+## Use External Fuzzer
 
 Honggfuzz提供**-c**选项调用外部Fuzzer。
 
@@ -118,7 +117,7 @@ Honggfuzz提供**-c**选项调用外部Fuzzer。
 
 [Not Done Yet] 能否结合libprotobuf-mutator?
 
-### Honggfuzz NetDriver
+## Honggfuzz NetDriver
 
 Honggfuzz提供了netdriver库可以fuzz socket类程序。只需要将程序main改成HFND_FUZZING_ENTRY_FUNCTION即可。
 
@@ -140,9 +139,9 @@ $ HFND_TCP_PORT=5001 ../../honggfuzz -f in -W out -- ./vuln
 
 
 
-### Appendix
+## Appendix
 
-#### A
+### A
 
 ```c
 #include <crypt.h>
