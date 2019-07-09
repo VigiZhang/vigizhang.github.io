@@ -10,6 +10,8 @@ Linux Kernel + Busybox + Qemu
 
 此文记录我的Linux Kernel调试环境搭建过程，参考于[blog](http://pwn.beers4flags.fr/exploit/kernel-cve-2017-5123/)。
 
+<!--more-->
+
 ## 1. 新建工作目录，如CVE-2017-5123
 
 ```

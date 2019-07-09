@@ -20,9 +20,9 @@ text_skin: forest # "default" (default), "dark", "forest", "ocean", "chocolate",
 highlight_theme: tomorrow # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : https://vigizhang.github.io # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : / # does not include hostname
-title   : 花生熊爱花生
+title   : Pwn, Fuzz & Rust
 description: > # this means to ignore newlines until "Language & timezone"
-    Pwn, Fuzz & Rust
+    peanut bear;)
 
 
 ## => Language and Timezone

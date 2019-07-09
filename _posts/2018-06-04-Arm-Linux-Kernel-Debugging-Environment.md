@@ -8,6 +8,8 @@ _version_: 1.0
 
 Linux Kernel + Busybox + Qemu
 
+<!--more-->
+
 ## 1. 新建工作目录，如CVE-2013-6282
 
 ```

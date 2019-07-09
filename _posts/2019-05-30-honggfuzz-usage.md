@@ -14,6 +14,8 @@ Honggfuzz实现了如下feedback-guided fuzzing方法：
 4. Sanitizer-coverage instrumentation (`-fsanitize-coverage=bb`)
 5. Compile-time instrumentation (`-finstrument-functions`or`-fsanitize-coverage=trace-pc[-guard],indirect-calls,trace-cmp`or both)
 
+<!--more-->
+
 hfuzz-clang会使用本机clang，所以本机clang的版本会对编译产生影响。
 
 - `-fsanitize-coverage=trace-pc-guard,indirect-calls,trace-cmp` - clang >= 4.0
