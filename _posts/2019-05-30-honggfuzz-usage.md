@@ -90,17 +90,17 @@ $ honggfuzz -P -S -f in -W out -- ./fuzz-target
 
 其他一些重要的选项：
 
-**--sanitizers|-S** 启用sanitizers
+**\-\-sanitizers\|\-S** 启用sanitizers
 
-**--threads|-n VALUE** 线程数 (default: number of CPUs / 2)
+**\-\-threads\|\-n VALUE** 线程数 (default: number of CPUs / 2)
 
-**--dict|-w** 字典
+**\-\-dict\|\-w** 字典
 
-**--noinst|-x** 不使用任何插桩反馈（包括软硬件方式）
+**\-\-noinst\|\-x** 不使用任何插桩反馈（包括软硬件方式）
 
-**--monitor_sigabrt VALUE** 监控SIGABRT (default: false for Android, true for other platforms)
+**\-\-monitor\_sigabrt VALUE** 监控SIGABRT (default: false for Android, true for other platforms)
 
-**--mutate_cmd|-c VALUE** 使用外部命令产生fuzz files (instead of internal mutators)
+**\-\-mutate\_cmd\|\-c VALUE** 使用外部命令产生fuzz files (instead of internal mutators)
 
 其他的选项见honggfuzz -h。
 
